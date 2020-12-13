@@ -11,7 +11,10 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'prettier'],
   extends: ['plugin:@typescript-eslint/recommended'], // this is optional 
-  rules: {'prettier/prettier': ['error', prettierConfig]},
+  rules: {
+    'prettier/prettier': ['error', prettierConfig],
+    '@typescript-eslint/explicit-module-boundary-type':  'off'
+  },
   env:{
     node: "true"
   }

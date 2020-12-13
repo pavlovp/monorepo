@@ -1,7 +1,15 @@
-import { sum } from '../src';
+import StackSet from '../src/models/StackSet';
 
-describe('blah', () => {
+describe('test1', () => {
   it('works', () => {
-    expect(sum(1, 1)).toEqual(2);
+    const s1 = new StackSet<number>();
+    s1.push(1);
+    s1.push(2);
+    s1.push(3);
+
+    const top = s1.pop();
+    console.log(top);
+
+    expect(top).toEqual(3);
   });
 });
