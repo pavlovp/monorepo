@@ -11,13 +11,15 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
+    "start": "node dist/index.js",
+    "start-build": "tsdx watch",
+    "build": "tsdx watch",
     "test": "tsdx test",
-    "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "lint": "eslint ./src --cache --ext ts,js",
+    "lint-fix": "yarn lint -- --fix"
   },
   "peerDependencies": {},
   "husky": {
@@ -46,7 +48,17 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.9.1",
-    "husky": "^4.3.5",
+    "@types/eslint": "^7.2.2",
+    "@types/jest": "^26.0.13",
+    "@types/node": "^14.6.4",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "babel-eslint": "^10.0.0",
+    "eslint": "^7.11.0",
+    "eslint-config-react-app": "latest",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.2.0",
+    "husky": "^4.2.5",
     "size-limit": "^4.9.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.0.3",

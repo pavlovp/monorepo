@@ -1,0 +1,45 @@
+[
+  {
+    "key": "f5",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "yarn start\u000D"
+    }
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "yarn build\u000D"
+    }
+  },
+  {
+    "key": "ctrl+m ctrl+o",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+0",
+    "command": "-editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+m ctrl+o",
+    "command": "editor.fold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+shift+oem_4",
+    "command": "-editor.fold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  }
+]
