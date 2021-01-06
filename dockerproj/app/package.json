@@ -8,7 +8,10 @@
     "test": "jest",
     "dev": "nodemon src/index.js",
     "docker-build": "docker build -t getting-started .",
-    "docker-start": "docker run -dp 3000:3000 getting-started"
+    "docker-start": "docker run -dp 3000:3000 getting-started",
+    "docker-start-named-volume": "docker run -dp 3000:3000 -v todo-db:/etc/todos getting-started",
+    "create-volume": "docker volume create todo-db",
+    "docker-inspect-volume": "docker volume inspect todo-db"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
